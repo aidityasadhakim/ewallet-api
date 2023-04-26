@@ -40,9 +40,9 @@ export const login = async (req, res) => {
 };
 
 export const register = async (req, res) => {
-  const userCheck = () => {
-    return User.findOne({ username: req.body.username });
-  };
+  const userCheck = await User.findOne({ username: req.body.username });
+
+  console.log(userCheck);
 
   if (userCheck) {
     return res.status(409).json({
