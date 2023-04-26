@@ -15,7 +15,7 @@ app.options("*", cors());
 // routes
 import { LoginRouter } from "./routes/login.js";
 import { UsersRouter } from "./routes/users.js";
-import { DepositRouter } from "./routes/transaction.js";
+import { TransactionRouter } from "./routes/transaction.js";
 
 // middleware
 app.use(morgan("tiny"));
@@ -27,7 +27,7 @@ const api = process.env.API_URL;
 
 app.use(`${api}/`, LoginRouter);
 app.use(`${api}/users`, UsersRouter);
-app.use(`${api}/transaction`, DepositRouter);
+app.use(`${api}/transaction`, TransactionRouter);
 
 // Database configuration
 mongoose

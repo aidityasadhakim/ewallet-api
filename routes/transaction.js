@@ -2,10 +2,10 @@ import express from "express";
 const router = express.Router();
 import * as depositController from "../controllers/transaction-controller.js";
 
-router.put("/deposit", depositController.deposit);
+router.post("/deposit", depositController.deposit);
 
-router.put("/withdrawal", depositController.withdrawal);
+router.post("/withdrawal", depositController.withdrawal);
 
-router.put("/transfer", depositController.transfer);
+router.post("/transfer", depositController.transfer);
 
-export { router as DepositRouter };
+export { router as TransactionRouter };
