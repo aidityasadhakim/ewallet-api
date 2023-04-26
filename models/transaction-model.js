@@ -25,6 +25,14 @@ const transactionSchema = mongoose.Schema({
   },
 });
 
+transactionSchema.virtual("id").get(function () {
+  return this._id.toHexString();
+});
+
+transactionSchema.set("toJSON", {
+  virtuals: true,
+});
+
 const Transaction = mongoose.model("Transaction", transactionSchema);
 
 export default Transaction;

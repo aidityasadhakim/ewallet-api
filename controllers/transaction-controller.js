@@ -166,4 +166,13 @@ const transfer = async (req, res) => {
   }
 };
 
-export { deposit, withdrawal, transfer };
+const transactions = async (req, res) => {
+  const transaction = await Transaction.find().select("-__v");
+
+  if (!transaction) {
+    return res.status(401).json({ message: "No transactions found" });
+  }
+  return res.status(200).json(transaction);
+};
+
+export { deposit, withdrawal, transfer, transactions };

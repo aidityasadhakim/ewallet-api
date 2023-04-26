@@ -2,7 +2,7 @@ import jwtDecode from "jwt-decode";
 import User from "../models/users-model.js";
 
 const getUser = async (req, res) => {
-  const user = await User.find();
+  const user = await User.find().select("-_id");
 
   if (user) {
     res.status(200).json(user);
