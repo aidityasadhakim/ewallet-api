@@ -1,0 +1,38 @@
+{
+  "name": "ewallet-api",
+  "version": "1.0.0",
+  "description": "EWallet API project",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidityasadhakim/ewallet-api.git"
+  },
+  "keywords": [
+    "ewallet",
+    "api",
+    "ewallet-api"
+  ],
+  "author": "Aidityas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aidityasadhakim/ewallet-api/issues"
+  },
+  "homepage": "https://github.com/aidityasadhakim/ewallet-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
+  },
+  "type": "module"
+}
